@@ -1,1 +1,55 @@
 
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Página de ejemplo BCI</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #252525;
+            color: white;
+        }
+        pre {
+            font-family: 'Monaco', monospace;
+        }
+        .tab {
+            display: none;
+        }
+        .tab.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Título de la página</h1>
+
+    <div>
+        <button onclick="showTab('tab1')">Pestaña 1</button>
+        <button onclick="showTab('tab2')">Pestaña 2</button>
+    </div>
+
+    <div id="tab1" class="tab active">
+        <pre>
+        Contenido de prueba en HTML de la Pestaña 1
+        </pre>
+    </div>
+
+    <div id="tab2" class="tab">
+        <pre>
+        Contenido de prueba en HTML de la Pestaña 2
+        </pre>
+    </div>
+
+    <script>
+        function showTab(tabId) {
+            var tabs = document.getElementsByClassName('tab');
+            for (var i = 0; i < tabs.length; i++) {
+                tabs[i].style.display = 'none';
+            }
+
+            var tabToShow = document.getElementById(tabId);
+            tabToShow.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
