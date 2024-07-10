@@ -1,55 +1,60 @@
-
 <!DOCTYPE html>
 <html>
 <head>
     <title>Página de ejemplo BCI</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Monaco&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Poppins', sans-serif;
             background-color: #252525;
             color: white;
+            padding: 20px;
         }
         pre {
             font-family: 'Monaco', monospace;
+            color: white;
         }
-        .tab {
-            display: none;
+        .nav-link {
+            color: white;
         }
-        .tab.active {
-            display: block;
+        .nav-link:hover {
+            color: #89CFF0 !important; /* Azul de alto contraste al poner el mouse sobre la pestaña */
+        }
+        .tab-content {
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
     <h1>Título de la página</h1>
 
-    <div>
-        <button onclick="showTab('tab1')">Pestaña 1</button>
-        <button onclick="showTab('tab2')">Pestaña 2</button>
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link active" href="#tab1" data-toggle="tab">Pestaña 1</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#tab2" data-toggle="tab">Pestaña 2</a>
+        </li>
+    </ul>
+
+    <div class="tab-content">
+        <div class="tab-pane active" id="tab1">
+            <pre>
+            Contenido de prueba en HTML de la Pestaña 1
+            </pre>
+        </div>
+        
+        <div class="tab-pane" id="tab2">
+            <pre>
+            Contenido de prueba en HTML de la Pestaña 2
+            </pre>
+        </div>
     </div>
 
-    <div id="tab1" class="tab active">
-        <pre>
-        Contenido de prueba en HTML de la Pestaña 1
-        </pre>
-    </div>
-
-    <div id="tab2" class="tab">
-        <pre>
-        Contenido de prueba en HTML de la Pestaña 2
-        </pre>
-    </div>
-
-    <script>
-        function showTab(tabId) {
-            var tabs = document.getElementsByClassName('tab');
-            for (var i = 0; i < tabs.length; i++) {
-                tabs[i].style.display = 'none';
-            }
-
-            var tabToShow = document.getElementById(tabId);
-            tabToShow.style.display = 'block';
-        }
-    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 </html>
