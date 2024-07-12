@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Monaco&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/styles/darkula.min.css">
     <style>
         body {
             font-family: 'Poppins', sans-serif;
@@ -136,12 +137,12 @@
                 <li>bldasdasdasdasdsadasdasdasdasdbldasdasdasdasdsadasdasdasdasdbldasdasdasdasdsadasdasdasdasdbldasdasdasdasdsadasdasdasdasdbldasdasdasdasdsadasdasdasdasd</li>
             </ul>
             <div class="slide_code">
-                <pre>
-                def funcion_prueba():
-                    print("Este es un ejemplo de función en Python")
+                <pre><code class='python'>
+def funcion_prueba():
+    print("Este es un ejemplo de función en Python")
 
-                funcion_prueba()
-                </pre>
+funcion_prueba()
+                </code></pre>
             </div>
             </div>
         </div>
@@ -158,7 +159,7 @@ Enteros
 Los enteros son números que no poseen decimales. Puedes comprobar si un número es un entero con la función type(). Si el resultado es <class 'int'>, entonces el número es un entero.</li>
             </ul>
             <div class="slide_code">
-                <pre>
+                <pre><code class="python">
 >>> type(1)
 <class 'int'>
 
@@ -170,7 +171,7 @@ Los enteros son números que no poseen decimales. Puedes comprobar si un número
 
 >>> type(-46)
 <class 'int'>
-                </pre>
+</code></pre>
             </div>
             </div>
         </div>
@@ -180,5 +181,7 @@ Los enteros son números que no poseen decimales. Puedes comprobar si un número
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
 </body>
 </html>
