@@ -43,7 +43,8 @@
     font-family: 'Poppins', sans-serif;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+   height: auto; /* Modificado para permitir expansión de contenido */
+    min-height: 50vh;
     box-sizing: border-box;
     padding: 20px;
     word-wrap: break-word; /* Añade este para el ajuste de texto */
@@ -148,14 +149,27 @@
             <div class="slide_c">
             <h2>bldasdasdasdasdsadasdasdasdasd</h2>
             <ul>
-                <li>bldasdasdasdasdsadasdasdasdasdbldasdasdasdasdsadasdasdasdasdbldasdasdasdasdsadasdasdasdasdbldasdasdasdasdsadasdasdasdasdbldasdasdasdasdsadasdasdasdasd</li>
+                <li>En Python tenemos varios tipos de datos básicos y estructuras de datos integrados con los que podemos trabajar. Cada uno tiene sus aplicaciones específicas. Veámoslos en detalle:
+
+Tipos de datos numéricos en Python: números enteros, números decimales y números complejos
+Estos son los tipos de datos numéricos que puedes usar en Python:
+
+Enteros
+Los enteros son números que no poseen decimales. Puedes comprobar si un número es un entero con la función type(). Si el resultado es <class 'int'>, entonces el número es un entero.</li>
             </ul>
             <div class="slide_code">
                 <pre>
-                def funcion_prueba():
-                    print("Este es un ejemplo de función en Python")
+>>> type(1)
+<class 'int'>
 
-                funcion_prueba()
+>>> type(15)
+<class 'int'>
+
+>>> type(0)
+<class 'int'>
+
+>>> type(-46)
+<class 'int'>
                 </pre>
             </div>
             </div>
