@@ -73,11 +73,22 @@
     box-sizing: border-box;
     font-family: "Monaco", monospace;
     word-wrap: break-word;
-}              
+}
+header {
+  position: sticky;
+  top: 0; 
+  background: black;
+  z-index: 1000; 
+}
+
+main {
+  overflow-y: auto; 
+  height: calc(100vh - /* Tu altura de cabecera aquí */);
+}
     </style>
 </head>
 <body>
-    
+<header>    
     <div class="container-fluid d-flex align-items-center">
   
     <a href="#" class="ms-auto link-light" hreflang="ar">
@@ -104,7 +115,8 @@
             <a class="nav-link" href="#tab2" data-toggle="tab">DSY1101-2S2024</a>
         </li>
     </ul>
-
+</header>
+<main>  
     <div class="tab-content">
         <div class="tab-pane active" id="tab1">
             <pre>
@@ -182,6 +194,7 @@ Los enteros son números que no poseen decimales. Puedes comprobar si un número
      
     </div>
 </div>
+</main>  
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
